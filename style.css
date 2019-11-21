@@ -1,0 +1,121 @@
+.page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.table-block{
+    margin: 20px auto;
+}
+
+.table {
+    cursor: pointer;
+    border-radius: 8px;
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+    box-shadow: 0px 0px 9px -1px rgba(33,7,33,1);
+}
+
+.delete_row_mode{
+    box-shadow: 3px 0px 26px 12px rgba(240,12,12,1) !important;
+}
+
+.active{
+    background: #a4b7ff !important;
+}
+
+.table td {
+    border: solid 1px #DDEEEE;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+    width: 25px;
+    height: 25px;
+}
+
+.table td:hover{
+    background: antiquewhite;
+}
+
+.rounded {
+    border: none;
+}
+
+.rounded td {
+    border: none;
+    background-color: #ddeee2;
+    color: #3a6980;
+}
+
+.rounded tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+.rounded tr:last-child td:last-child {
+     border-radius: 0 0 10px 0;
+ }
+
+.rounded tr:first-child td:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+.rounded tr:first-child td:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+
+.buttons-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px!important;
+    width: 100%;
+    min-height: 100px;
+}
+
+.box {
+    cursor: pointer;
+    background: linear-gradient(to right, #b4daff, #3c67ff);
+    color: white;
+    --width: 250px;
+    --height: calc(var(--width) / 5);
+    width: var(--width);
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    font-size: calc(var(--height) / 2.5);
+    font-family: sans-serif;
+    letter-spacing: 0.2em;
+    border: 1px solid #9389b8;
+    border-radius: 2em;
+    transform: perspective(500px) rotateY(-15deg);
+    text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.box:hover {
+    transform: perspective(500px) rotateY(15deg);
+    text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, white, transparent);
+    left: -100%;
+    transition: 0.5s;
+}
+
+.box:hover::before {
+    left: 100%;
+}
